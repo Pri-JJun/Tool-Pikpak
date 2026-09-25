@@ -1,0 +1,51 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "pikpak: 인자 입력",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "pikpak_tool",
+      "args": "${command:pickArgs}",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      "name": "pikpak: scan (확장자 요약)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "pikpak_tool",
+      "args": ["scan"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "pikpak: rename --dry-run",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "pikpak_tool",
+      "args": ["rename", "-f", "/Movies/2024", "-r", "광고", "--dry-run"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "pikpak: clean --dry-run",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "pikpak_tool",
+      "args": ["clean", "--dry-run"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "pytest",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "pytest",
+      "args": ["-v"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    }
+  ]
+}
